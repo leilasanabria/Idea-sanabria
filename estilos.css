@@ -1,0 +1,962 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+ 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+    font-family: sans-serif;
+}
+
+body{
+    background-color:#d8dbdb ;
+ 
+}
+
+header{
+    margin-top: 0;
+    margin-left: 0;
+}
+
+header nav{
+    height: 80px;
+    background:#8a9c83;
+    list-style: none;
+}
+
+.logo{
+    width: 150px;
+    position: absolute;
+    top: 30px;
+    left: 12%;
+}
+
+header nav ul{
+    float: right;
+    margin: 5px;
+    margin-right: 50px;
+}
+
+header nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px ;
+}
+
+header nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 15px;
+}
+
+header nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+
+header nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+label #btn,
+label #cancel{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+/*section index*/
+ 
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#section1{
+    background-image: url(/multimedia/vino-botella.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+#section1:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#section1 h1{
+    display: block;
+    width: fit-content;
+    font-size: 50px;
+    color: #630b08;
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+
+.p1{
+    margin-left: 30px;
+    margin-top: 15px;
+    width: 50%;
+    line-height: 25px;
+    color: white;
+    font-size: 16px;
+}
+
+.p2{
+    margin-left: 30px;
+    margin-top: 15px;
+    color: grey;
+    font-size: 14px;
+}
+
+#section1 .masinfo{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #526c72;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 36px;
+    margin-left: 30px;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+#section1 .masinfo:hover{
+    color: #526c72;
+    transform: scale(1.1);
+}
+
+
+.regiones{
+    height: auto;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(9, 37, 18);
+    font-size: 30px;
+    padding-top: 50px;
+}
+ 
+.region{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas:
+    "imgn imgc imgp";
+ 
+    height: auto;
+    transition: all 0.7s;
+    color: black;
+    margin-top: 30px;
+    padding: 30px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;  
+    }
+ 
+    .reg{
+        border: 1px solid #526c72;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(196, 194, 194);
+        min-height: 150px;
+        width: 100%;
+        transition: all 0.7s;
+        font-size: 25px;
+        padding: 80px;
+    }
+   
+    .reg:hover{
+        transform: scale(1.05);
+        transition: all 0.7s;
+    }
+ 
+    .imgn{
+        background-image: url(multimedia/norte.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+   
+    .imgp{
+        background-image: url(multimedia/patagonia.jpg.crdownload);
+        background-size:cover ;
+        background-position: center;
+    }
+   
+    .imgc{
+        background-image: url(multimedia/cuyo.jfif);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* estilos del main pag vinos*/
+ 
+    .pag2{
+        display: flex;
+    }
+ 
+    .principal{
+        background-color: #3537381c;
+    }
+ 
+    .principal h1{
+        padding: 50px;
+        font-family: sans-serif;
+        font-size: 50px;
+        text-align: center;
+        display: block;
+        color: #630b08;
+    }
+ 
+    .pag2 p{
+        padding:10px 40px;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: left;
+    }
+ 
+    .principal h2{
+        font-family: sans-serif;
+        font-size: 20px;
+        padding-left: 40px;
+        padding-top: 30px;
+    }
+ 
+    .variedades{
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 22px;
+        padding-left: 60px;
+        padding-top: 10px;
+    }
+ 
+    .section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+    .section h3{
+        font-family: sans-serif;
+        font-size: 18px;
+        margin-top: 50px;
+        color: rgb(85, 111, 42);
+    }
+ 
+    .section div{
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        height: 500px;
+        justify-content: space-around;
+        align-items: center;
+    }
+ 
+    .section div img{
+        width: 70%;
+        border-radius: 5px;
+    }
+
+    .section div img:hover{
+        transform: scale(1.1);
+    }
+
+    
+    .tabla{
+        position: relative;
+        margin-left: 150px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+       
+    }
+ 
+    .tabla th{
+        background-color: #526c72;
+        color: white;
+        font-family: sans-serif;
+  }
+   
+    .tabla td{
+      font-family: sans-serif;
+      font-size:10px;
+      color: white;
+      background-color: #526c72;
+      text-align: center;
+      padding: 10px 25px 30px 30px;
+}
+
+
+
+/* pag3 viticultura*/
+ 
+.viticultura h1{
+    font-family: sans-serif;
+    text-align: center;
+    flex-direction: row;
+    color: #526c72;
+    margin-top: 50px;
+    font-size: 40px;
+}
+.vid1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vid1 p{
+    text-align: justify;
+    margin: 30px;
+}
+
+.vid1 img{
+    width: 70%;
+    padding: 30px 50px;
+}
+
+.viticultura h2{
+    text-align: left;
+    flex-direction: row;
+    color: #526c72;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.vid2{
+    margin: 30px;
+}
+
+
+    /*Bodegas pag 4*/
+ 
+ 
+.pag4{
+    margin: 50px;
+    font-family: sans-serif;
+    font-size: 45px;
+    text-align: center;
+    color:#526c72;
+}
+ 
+.bodegas p{
+    width: 70%;
+    margin: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+}
+ 
+ 
+.select-box select{
+    width: 40%;
+    display: flex;
+    font-size: 14px;
+    color: #526c72;
+    padding: 10px 30px ;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+ 
+ 
+.select-box h2{
+    font-size: 16px;
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/*grids*/
+
+.galeria{
+    width: 100%;
+    height: auto;
+    color: #121f08;
+    text-shadow:  2px 2px 2px white;
+    margin-top: 30px;
+    padding: 40px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+/*
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+    "img1 img2 img3 img4"
+    "img1 img2 img3 img4"
+    "img1 img2 img3 img4"
+    "img1 img4 img4 img4";*/
+
+}
+ 
+.imgn{
+    background-image: url(multimedia/norte.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.imgp{
+    background-image: url(multimedia/patagonia.jpg.crdownload);
+    background-size:cover ;
+    background-position: center;
+}
+ 
+.imgc{
+    background-image: url(multimedia/cuyo.jfif);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img{
+    border: 2px solid #526c72;
+    min-height: 130px;
+    width: 100%;
+    transition: all 0.7s;
+    filter: grayscale(100%);
+    font-size: 25px;
+    padding: 10px;
+}
+ 
+.img:hover{
+    transform: scale(1.05);
+    transition: all 0.7s;
+    filter: grayscale(0);
+}
+ 
+.img1{
+    background-image: url(multimedia/Bodega\ tierras\ altas.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img2{
+    background-image: url(multimedia/Bodega\ casa\ el\ enemigo.jpg);
+    background-size:cover ;
+    background-position: center;
+}
+ 
+.img3{
+    background-image: url(multimedia/bodegas\ lopez.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+ 
+.img4{
+    background-image: url(multimedia/bodega\ ruca\ malen.jfif);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img5{
+    background-image: url(multimedia/bodega\ merced\ del\ estereo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img6{
+    background-image: url(multimedia/Bodega\ Vistalba.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img7{
+    background-image: url(multimedia/bodega\ Susana\ Balbo\ Wines.webp);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img8{
+    background-image: url(multimedia/bodega\ budeguer.jfif);
+    background-size: cover;
+    background-position: center;
+}
+
+ /* contacto*/
+    
+
+ .contact_form{  
+    width: 460px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: rgb(227, 213, 195); 
+    padding-left: 30px; 
+  }
+  
+  
+  .formulario input{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgb(151, 151, 102); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+  }
+  
+  
+  .formulario textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgb(151, 151, 102); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+  }
+  
+  
+  .formulario label{
+    display: block; 
+    float: center;  
+  }
+  
+  
+  .formulario button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: rgb(151, 151, 102); 
+    border-color: rgb(151, 151, 102); 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+  }
+  
+  
+  .formulario button p{
+    color: #fff; 
+  }
+  
+  
+  .formulario span{
+    color: rgb(151, 151, 102); 
+  }
+  
+  
+  .aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+  }
+  
+  
+  .contact_form h1{
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: rgb(151, 151, 102);
+  }
+  
+  
+  
+  .formulario p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+  }
+  
+  
+  ::-webkit-input-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  ::-webkit-textarea-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  .formulario input:focus{
+    outline:0;
+    border: 1px solid rgb(180, 182, 72);
+  }
+  
+  
+  .formulario textarea:focus{
+    outline:0;
+    border: 1px solid rgb(180, 182, 72);
+  }
+  
+  .formulario select{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 80px;
+    border-color: rgb(151, 151, 102);
+    border-radius: 5px;
+    color: #232829;
+   }
+   
+.form-group{
+    font-size: 12px;
+    margin-top: 14px;
+    padding-bottom: 10px;
+}
+
+
+
+    /* estilos del footer*/
+ 
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #111;
+        height: auto;
+        width: 100vw;
+        padding-top: 40px;
+        color: #fff;
+    }
+
+    .footer-content{
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content h3{
+        font-size: 2.1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 3rem;
+    }
+
+    .footer-content p{
+        max-width: 400px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 14px;
+        color: #cacdd2;
+    }
+
+    .redes{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0;
+    }
+    
+    .redes li{
+        margin: 0 10px;
+    }
+    
+    .redes a{
+        text-decoration: none;
+        color: #fff;
+        border: 1.1px solid white;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 50%;
+    }
+    
+    .redes a i{
+        font-size: 1.1rem;
+        width: 20px;
+        transition: color .4s ease;
+    }
+    
+    .redes a:hover {
+        transform: scale(1.2);
+        color: #cfd2d6;
+    }
+
+    .footer-bottom{
+        background: rgb(15, 14, 14);
+        width: 100vw;
+        padding: 20px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-bottom p{
+        float: left;;
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+     }
+     .footer-bottom p a{
+       color:#526c72;
+       font-size: 16px;
+       text-decoration: none;
+     }
+     .footer-bottom span{
+         text-transform: uppercase;
+         opacity: .4;
+         font-weight: 200;
+     }
+
+     .footer-menu{
+        float: right;
+      }
+      
+      .footer-menu ul{
+        font-size: 12px;
+        display: flex;
+        padding: 20px;
+      }
+      
+      .footer-menu ul li{
+      padding-right: 10px;
+      display: block;
+      }
+      
+      .footer-menu ul li a{
+        color: #cfd2d6;
+        text-decoration: none;
+      }
+      
+      .footer-menu ul li a:hover{
+        color: #526c72;
+      }
+
+
+    
+ 
+
+
+/*Media queries*/
+
+@media only screen and (max-width: 1118px) {
+    .logo{
+        left: 8%;
+    }
+
+    .contact_form{  
+        width: 460px; 
+        height: auto;
+       
+      }
+    
+     
+}
+@media only screen and (max-width: 944px) {
+    nav .logo{
+        left: 6%;
+        top: 30px;
+        width: 130px;
+    }
+    header nav ul li a{
+        font-size: 17px;
+    }
+}
+
+@media (max-height:880px){
+    footer{
+        position: static;
+    }
+}
+
+
+
+@media only screen and (max-width: 860px) {
+    label #btn{
+        display: block;
+    }
+    header ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #a2b39c;
+        top: 75px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    header nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    header nav ul li a{
+        font-size: 17px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #check:checked ~ label #btn{
+        display: none;
+    }
+    #check:checked ~ label #cancel{
+        display: block;
+    }
+
+  
+    #section1 h1{
+        font-size: 40px;
+    }
+
+    
+}
+
+@media only screen and (max-width:767px) {
+    
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.img1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.img2{
+    grid-column:2/3 ;
+    grid-row:1/2 ;
+}
+.img3{
+    grid-column:3/4 ;
+    grid-row:1/3 ;
+}
+.img4{
+    grid-column: 2/3 ;
+    grid-row:2/3 ;
+}
+.img5{
+    grid-column:1/3;
+    grid-row:3/4 ;
+}
+.img6{
+    grid-column: 3/4;
+    grid-row:3/4 ;
+}
+.img7{
+    grid-column:1/2;
+    grid-row:4/5 ;
+}
+.img8{
+    grid-column:2/4 ;
+    grid-row:4/5 ;
+}
+}
+
+@media only screen and (max-width:599px) {
+    /*footer*/
+    .footer-menu ul{
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 10px;
+    }
+    }
+
+
+@media only screen and (min-width: 320px){
+/*header*/
+    #section1 h1{
+        font-size: 30px;
+        margin-top: 20px;
+        letter-spacing: 1px;
+    }
+ 
+
+    .p1{
+        line-height: 17px;
+        color: white;
+        font-size: 15px;
+    }
+    
+    .p2{
+        color: grey;
+        font-size: 12px;
+    }
+/*section index*/
+    .region{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        border-radius:0%;
+    }
+ 
+    .imgn{
+        grid-column: 1/3;
+        grid-row: 1/1;
+    }
+    .imgp{
+        grid-column:1/3 ;
+        grid-row:2/3 ;
+    }
+    .imgc{
+        grid-column:1/3 ;
+        grid-row:3/3 ;
+    }
+
+    .footer-content{ 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-menu ul{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 10px;
+      }
+
+      .footer-bottom p{
+        font-size: 12px;
+
+     }
+      
+
+
+    /*pag 4 bodega*/
+    .galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+}
+     
