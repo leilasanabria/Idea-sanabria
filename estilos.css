@@ -5,9 +5,9 @@
     text-decoration: none;
 }
  
-html{
+html{/*
     scroll-behavior: smooth;
-    scroll-padding-top: 9rem;
+    scroll-padding-top: 9rem;*/
     font-family: sans-serif;
 }
 
@@ -19,9 +19,11 @@ body{
 header{
     margin-top: 0;
     margin-left: 0;
+    margin-right: 0;
 }
 
 header nav{
+    width: 100%;
     height: 80px;
     background:#8a9c83;
     list-style: none;
@@ -165,7 +167,7 @@ label #cancel{
     height: auto;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(9, 37, 18);
+    color: rgb(82, 108, 114);
     font-size: 30px;
     padding-top: 50px;
 }
@@ -179,7 +181,7 @@ label #cancel{
  
     height: auto;
     transition: all 0.7s;
-    color: black;
+    color: rgb(255, 255, 255);
     margin-top: 30px;
     padding: 30px;
     font-size: 35px;
@@ -269,18 +271,20 @@ label #cancel{
         justify-content: space-evenly;
         margin-top: 20px;
     }
-    .section h3{
+
+    .section p{
+        position: absolute;
         font-family: sans-serif;
-        font-size: 18px;
-        margin-top: 50px;
-        color: rgb(85, 111, 42);
+        font-size: 16px;
+        margin-top: -180px;
+        color: rgb(255, 255, 255);
     }
  
     .section div{
         display: flex;
         flex-direction: column;
         width: 35%;
-        height: 500px;
+        margin-top: 30px;
         justify-content: space-around;
         align-items: center;
     }
@@ -294,70 +298,211 @@ label #cancel{
         transform: scale(1.1);
     }
 
-    
-    .tabla{
-        position: relative;
-        margin-left: 150px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-       
-    }
- 
-    .tabla th{
-        background-color: #526c72;
-        color: white;
-        font-family: sans-serif;
-  }
-   
-    .tabla td{
-      font-family: sans-serif;
-      font-size:10px;
-      color: white;
-      background-color: #526c72;
-      text-align: center;
-      padding: 10px 25px 30px 30px;
+
+.contenedor-galeria-vino {
+    padding: 30px 0;
+    width: 80%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
+
+.galeria-vino{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-vino{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-vino > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria-vino{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    transform: translateY(50%);
+    opacity: 1;
+    background: rgba(85, 111, 42);
+    transition: transform .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria-vino img{
+    width: 50px;
+}
+
+.hover-galeria-vino p{
+    color: #fff;
+    margin-bottom: 80px;
+    font-size: 16px;
+}
+
+.imagen-vino:hover .hover-galeria-vino{
+    opacity: 0;
+}
+
+
 
 
 
 /* pag3 viticultura*/
  
-.viticultura h1{
-    font-family: sans-serif;
+video{
+    width: 100%; 
+}
+
+.absolute{
+    left: 0;
+    right: 0;
+    position: absolute;
     text-align: center;
-    flex-direction: row;
-    color: #526c72;
-    margin-top: 50px;
+    display: inline-block;
+    justify-content: center;
+    align-items:center;
+}
+
+.absolute h1{
+    font-size: 60px;
+    font-weight: 900;
+    z-index: 100;
+    color:rgb(255, 255, 255);
+    margin-top: 150px;
+}
+
+.absolute ::after{
+    display: block;
+    width: 30%;
+    height: 10px;
+    content: "";
+    margin: auto;
+    background: rgb(255, 255, 255);
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+section .titulo {
+    color: rgb(116, 61, 81);
     font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
-.vid1{
+
+main .viticultura{
+    padding: 30px 0 60px 0;
+}
+.contenedor-viticultura{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
-.vid1 p{
+.imagen-about-us{
+    width: 48%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.viticultura .contenido-textos{
+    width: 48%;
+}
+
+
+
+.contenido-textos p{
+    padding: 20px 0px 30px 15px;
+    font-weight: 300;
+    line-height: 1.3;
     text-align: justify;
-    margin: 30px;
 }
 
-.vid1 img{
-    width: 70%;
-    padding: 30px 50px;
+
+/* Galeria */
+
+
+.noticias{
+    background: #f2f2f2;
 }
 
-.viticultura h2{
-    text-align: left;
-    flex-direction: row;
-    color: #526c72;
-    margin-left: 30px;
-    margin-top: 30px;
-    font-size: 30px;
+.galeria-not{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.vid2{
-    margin: 30px;
+.imagen-not{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
 }
+
+.imagen-not > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgba(151, 151, 102);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+    font-size: 16px;
+   
+}
+
+.imagen-not:hover .hover-galeria{
+    transform: scale(1);
+}
+
 
 
     /*Bodegas pag 4*/
@@ -511,6 +656,7 @@ label #cancel{
     
 
  .contact_form{  
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
     width: 460px; 
     height: auto;
     margin: 80px auto;
@@ -627,11 +773,12 @@ label #cancel{
   
   .formulario select{
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 80px;
-    border-color: rgb(151, 151, 102);
+    border-color: #979766;
     border-radius: 5px;
-    color: #232829;
+    color:/* #232829*/white;
+    background-color: #979766;
    }
    
 .form-group{
@@ -722,7 +869,7 @@ label #cancel{
 
     .footer-bottom p{
         float: left;;
-        font-size: 14px;
+        font-size: 12px;
         word-spacing: 2px;
         text-transform: capitalize;
      }
@@ -875,6 +1022,32 @@ label #cancel{
     grid-column:1/4 ;
     grid-row:3/3 ;
 }
+
+/*pag2 vinos*/
+.section p{
+    font-size: 14px;
+    margin-top: -100px;
+    
+}
+
+.hover-galeria-vino p{
+    margin-bottom: 60px;
+    font-size: 14px;
+}
+
+/*pag3 viticultura*/
+.contenedor-viticultura{
+    display: inline;
+}
+
+.imagen-about-us{
+    width: 100%;
+}
+
+.viticultura .contenido-textos{
+    width: 100%;
+}
+
 }
 
 
@@ -919,6 +1092,73 @@ label #cancel{
         grid-row:3/3 ;
     }
 
+    
+    /*pag2 vinos*/
+    
+    .section p{
+        font-size: 12px;
+        margin-top: -50px;
+    }
+    
+ 
+    .section div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 40%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .hover-galeria-vino p{
+        color: #fff;
+        margin-bottom: 40px;
+        font-size: 12px;
+    }
+
+    /*pag3 viticultura*/
+
+    
+.absolute h1{
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.contenedor {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+section .titulo {
+    font-size: 35px;
+}
+
+
+.contenedor-viticultura{
+    display: inline;
+}
+
+.imagen-about-us{
+    width: 100%;
+}
+
+.viticultura .contenido-textos{
+    width: 100%;
+}
+
+.hover-galeria p{
+    font-size: 12px;
+}
+
+
+    /*pag 4 bodega*/
+    .galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     /*footer*/
     .footer-content{ 
         align-items: center;
@@ -942,15 +1182,6 @@ label #cancel{
         font-size: 10px;
       }
     
-      
-
-
-    /*pag 4 bodega*/
-    .galeria{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
     
 }
      
