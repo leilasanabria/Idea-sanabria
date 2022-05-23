@@ -8,15 +8,18 @@
 html{/*
     scroll-behavior: smooth;
     scroll-padding-top: 9rem;*/
-    font-family: sans-serif;
+    
 }
 
 body{
+    width: 100%;
     background-color:#d8dbdb ;
+    font-family: sans-serif;
  
 }
 
 header{
+    width: 100%;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
@@ -1036,6 +1039,10 @@ main .viticultura{
 }
 
 /*pag3 viticultura*/
+.absolute h1{
+    z-index: 10;
+}
+
 .contenedor-viticultura{
     display: inline;
 }
