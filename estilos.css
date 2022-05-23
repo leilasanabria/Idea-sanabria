@@ -5,9 +5,9 @@
     text-decoration: none;
 }
  
-html{/*
+html{
     scroll-behavior: smooth;
-    scroll-padding-top: 9rem;*/
+    scroll-padding-top: 9rem;
     
 }
 
@@ -780,7 +780,7 @@ main .viticultura{
     width: 80px;
     border-color: #979766;
     border-radius: 5px;
-    color:white;
+    color: white;
     background-color: #979766;
    }
    
