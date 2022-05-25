@@ -40,6 +40,7 @@ header nav{
 }
 
 header nav ul{
+    z-index: 10;
     float: right;
     margin: 5px;
     margin-right: 50px;
@@ -926,6 +927,8 @@ main .viticultura{
         top: 30px;
         width: 130px;
     }
+
+
     header nav ul li a{
         font-size: 17px;
     }
@@ -951,6 +954,7 @@ main .viticultura{
     header nav ul li a{
         font-size: 17px;
     }
+
     #check:checked ~ ul{
         left: 0;
     }
