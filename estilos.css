@@ -107,7 +107,7 @@ label #cancel{
 
 
 #section1{
-    background-image: url(../multimedia/vino-botella.jpg);
+    background-image: url(./multimedia/vino-botella.jpg);
     background-size: cover;
     background-position: top center;
 }
@@ -173,7 +173,7 @@ label #cancel{
     background-color: #979766;
     height: 350px;
     width: 100%;
-    background-image:url(../multimedia/viñedo\ b\ y\ n.jpg);
+    background-image:url(./multimedia/viñedo\ b\ y\ n.jpg);
     background-size: cover;
     background-position: right;
 }
@@ -639,50 +639,50 @@ main .viticultura{
 }
  
 .img1{
-    background-image: url(../multimedia/1\ tierras\ altas.jpg);
+    background-image: url(multimedia/1\ tierras\ altas.jpg);
     background-size: cover;
     background-position: center;
 }
  
 .img2{
-    background-image: url(../multimedia/2\ casa\ el\ enemigo.jpg);
+    background-image: url(multimedia/2\ casa\ el\ enemigo.jpg);
     background-size:cover ;
     background-position: center;
 }
  
 .img3{
-    background-image: url(../multimedia/3\ lopez.jpeg);
+    background-image: url(multimedia/3\ lopez.jpeg);
     background-size: cover;
     background-position: center;
 }
  
  
 .img4{
-    background-image: url(../multimedia/4\ ruca\ malen.jpg);
+    background-image: url(multimedia/4\ ruca\ malen.jpg);
     background-size: cover;
     background-position: center;
 }
  
 .img5{
-    background-image: url(../multimedia/5\ merced\ del\ estereo.jpg);
+    background-image: url(multimedia/5\ merced\ del\ estereo.jpg);
     background-size: cover;
     background-position: center;
 }
  
 .img6{
-    background-image: url(../multimedia/6\ vistalba.jfif);
+    background-image: url(multimedia/6\ vistalba.jfif);
     background-size: cover;
     background-position: center;
 }
  
 .img7{
-    background-image: url(../multimedia/7\ susana\ balbo.jpeg);
+    background-image: url(multimedia/7\ susana\ balbo.jpeg);
     background-size: cover;
     background-position: center;
 }
  
 .img8{
-    background-image: url(../multimedia/8\ budeguer.jpg.crdownload);
+    background-image: url(multimedia/8\ budeguer.jpg.crdownload);
     background-size: cover;
     background-position: center;
 }
