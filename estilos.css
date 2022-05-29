@@ -56,6 +56,7 @@ header nav ul li a{
     position: relative;
     color: white;
     font-size: 15px;
+    text-decoration: none;
 }
 
 header nav ul li a:before{
@@ -90,6 +91,7 @@ label #cancel{
 #check{
     display: none;
 }
+
 
 
 /*section index*/
@@ -166,6 +168,32 @@ label #cancel{
     transform: scale(1.1);
 }
 
+
+.nleft{
+    background-color: #979766;
+    height: 350px;
+    width: 100%;
+    background-image:url(/multimedia/viñedo\ b\ y\ n.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+.nright{
+    background-color: #8a9c83;
+    height: 350px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.nright h2{
+    color: #111;
+    margin-top: 20px;
+}
+.nright p{
+    text-align: justify;
+    margin-top: 20px;
+}
 
 .regiones{
     height: auto;
@@ -268,6 +296,8 @@ label #cancel{
         padding-left: 60px;
         padding-top: 10px;
     }
+
+
  
     .section{
         display: flex;
@@ -276,12 +306,13 @@ label #cancel{
         margin-top: 20px;
     }
 
-    .section p{
+    .section h2{
         position: absolute;
         font-family: sans-serif;
-        font-size: 16px;
+        font-size: 30px;
         margin-top: -180px;
         color: rgb(255, 255, 255);
+        text-shadow: 20px black; 
     }
  
     .section div{
@@ -608,56 +639,75 @@ main .viticultura{
 }
  
 .img1{
-    background-image: url(multimedia/Bodega\ tierras\ altas.jpg);
+    background-image: url(multimedia/1\ tierras\ altas.jpg);
     background-size: cover;
     background-position: center;
 }
  
 .img2{
-    background-image: url(multimedia/Bodega\ casa\ el\ enemigo.jpg);
+    background-image: url(multimedia/2\ casa\ el\ enemigo.jpg);
     background-size:cover ;
     background-position: center;
 }
  
 .img3{
-    background-image: url(multimedia/bodegas\ lopez.jpg);
+    background-image: url(multimedia/3\ lopez.jpeg);
     background-size: cover;
     background-position: center;
 }
  
  
 .img4{
-    background-image: url(multimedia/bodega\ ruca\ malen.jfif);
+    background-image: url(multimedia/4\ ruca\ malen.jpg);
     background-size: cover;
     background-position: center;
 }
  
 .img5{
-    background-image: url(multimedia/bodega\ merced\ del\ estereo.jpg);
+    background-image: url(multimedia/5\ merced\ del\ estereo.jpg);
     background-size: cover;
     background-position: center;
 }
  
 .img6{
-    background-image: url(multimedia/Bodega\ Vistalba.jpg);
+    background-image: url(multimedia/6\ vistalba.jfif);
     background-size: cover;
     background-position: center;
 }
  
 .img7{
-    background-image: url(multimedia/bodega\ Susana\ Balbo\ Wines.webp);
+    background-image: url(multimedia/7\ susana\ balbo.jpeg);
     background-size: cover;
     background-position: center;
 }
  
 .img8{
-    background-image: url(multimedia/bodega\ budeguer.jfif);
+    background-image: url(multimedia/8\ budeguer.jpg.crdownload);
     background-size: cover;
     background-position: center;
 }
 
+.carousel-inner img {
+    width: 100%;
+  }
+
  /* contacto*/
-    
+
+ .jumbotron h1{
+     text-align: left;
+     color: #630b08;
+     margin-top: 2px;
+     text-transform: capitalize;
+     margin-left: 20px;
+     font-size: 50px;
+ }
+
+ .row p{
+     left: 20px;
+     font-size: 16px;
+     justify-content: center;
+ }
+
 
  .contact_form{  
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
@@ -725,18 +775,15 @@ main .viticultura{
   
   .formulario button p{
     color: #fff; 
+    padding: 10px;
+    justify-content: center;
   }
   
   
   .formulario span{
     color: rgb(151, 151, 102); 
   }
-  
-  
-  .aviso{
-    font-size: 13px;  
-    color: #0e0e0e;  
-  }
+
   
   
   .contact_form h1{
@@ -745,8 +792,6 @@ main .viticultura{
     padding-bottom: 20px; 
     color: rgb(151, 151, 102);
   }
-  
-  
   
   .formulario p{
     font-size: 14px; 
@@ -789,8 +834,21 @@ main .viticultura{
     font-size: 12px;
     margin-top: 14px;
     padding-bottom: 10px;
+    display: flex;
 }
 
+.form-group label{
+    margin-left: 5px;
+}
+
+.estado-civil{
+    font-size: 14px;
+}
+
+.aviso{
+    color: #630b08;
+    font-size: 13px; 
+}
 
 
     /* estilos del footer*/
@@ -854,7 +912,7 @@ main .viticultura{
     
     .redes a i{
         font-size: 1.1rem;
-        width: 20px;
+        width: 25px;
         transition: color .4s ease;
     }
     
@@ -917,13 +975,17 @@ main .viticultura{
  
 
 
+
+
+
 /*Media queries*/
 
-/*Mobile*/
 
 @media only screen and (max-width: 978px) {
+
+    /*header*/
     nav .logo{
-        left: 6%;
+        left: 10%;
         top: 30px;
         width: 130px;
     }
@@ -933,16 +995,24 @@ main .viticultura{
         font-size: 17px;
     }
 
+    #btn{
+        margin-left: 25px;
+    }
+    #cancel{
+        margin-left: 25px;
+    }
+
     label #btn{
         display: block;
     }
+
     header ul{
         position: fixed;
         width: 100%;
         height: 100vh;
         background: #a2b39c;
         top: 75px;
-        left: 100%;
+        right: 100%;
         text-align: center;
         transition: all .5s;
     }
@@ -950,6 +1020,7 @@ main .viticultura{
         display: block;
         margin: 50px 0;
         line-height: 30px;
+        color: white;
     }
     header nav ul li a{
         font-size: 17px;
@@ -957,9 +1028,12 @@ main .viticultura{
 
     #check:checked ~ ul{
         left: 0;
+        bottom: 0;
+   
     }
     #check:checked ~ label #btn{
         display: none;
+        
     }
     #check:checked ~ label #cancel{
         display: block;
@@ -970,7 +1044,12 @@ main .viticultura{
         font-size: 40px;
     }
 
-
+    /*pag vinos*/
+    .section h2{
+        font-size: 18px;
+        margin-left: -30px;
+        margin-top: -100px;
+    }
     
 }
 
@@ -978,6 +1057,17 @@ main .viticultura{
 
 
 @media only screen and (max-width:767px) {
+
+    /*header*/
+    .logo{
+        margin-left: 25px;
+    }
+    #btn{
+        margin-left: 25px;
+    }
+    #cancel{
+        margin-left: 25px;
+    }
     
 /*pag 4 bodegas*/
 .galeria{
@@ -1031,10 +1121,10 @@ main .viticultura{
 }
 
 /*pag2 vinos*/
-.section p{
-    font-size: 14px;
+.section h2{
+    font-size: 16px;
+    margin-left: -35px;
     margin-top: -100px;
-    
 }
 
 .hover-galeria-vino p{
@@ -1106,9 +1196,10 @@ main .viticultura{
     
     /*pag2 vinos*/
     
-    .section p{
-        font-size: 12px;
-        margin-top: -50px;
+    .section h2{
+        font-size: 14px;
+        margin-top: -40px;
+        margin-left: -40px;
     }
     
  
