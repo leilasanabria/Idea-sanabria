@@ -57,6 +57,7 @@ header nav ul li a{
     color: white;
     font-size: 15px;
     text-decoration: none;
+    color: white;
 }
 
 header nav ul li a:before{
@@ -75,6 +76,10 @@ header nav ul li a:before{
 header nav ul li a:hover:before{
     transform: scaleX(1);
     transform-origin: left;
+}
+
+header nav ul li a:hover{
+    color: white;
 }
 
 label #btn,
@@ -386,7 +391,7 @@ label #cancel{
 .hover-galeria-vino p{
     color: #fff;
     margin-bottom: 80px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .imagen-vino:hover .hover-galeria-vino{
@@ -1068,6 +1073,7 @@ main .viticultura{
     #cancel{
         margin-left: 25px;
     }
+
     
 /*pag 4 bodegas*/
 .galeria{
@@ -1208,15 +1214,25 @@ main .viticultura{
         flex-direction: column;
         margin-top: 20px;
         width: 40%;
-        justify-content: space-around;
-        align-items: center;
     }
+
+    
+    .contenedor-galeria-vino {
+       width:80%;
+       margin: auto;
+}
+
+
+
+.imagen-vino{
+    width: 50%;
+    margin-bottom: 10px;
+}
 
 
     .hover-galeria-vino p{
-        color: #fff;
-        margin-bottom: 40px;
-        font-size: 12px;
+        margin-bottom: 80px;
+        font-size: 16px;
     }
 
     /*pag3 viticultura*/
