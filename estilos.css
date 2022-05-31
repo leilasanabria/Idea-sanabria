@@ -192,12 +192,13 @@ label #cancel{
 }
 
 .nright h2{
-    color: #111;
     margin-top: 20px;
+    color: white;
+    justify-content: center;
 }
 .nright p{
     text-align: justify;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .regiones{
