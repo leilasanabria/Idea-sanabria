@@ -1,1306 +1,491 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
- 
-html{
-    scroll-behavior: smooth;
-    scroll-padding-top: 9rem;
-    
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-body{
-    width: 100%;
-    background-color:#d8dbdb ;
-    font-family: sans-serif;
- 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+html body {
+  width: 100%;
+  background-color: #d8dbdb;
+  font-family: "Roboto", sans-serif;
 }
 
-header{
-    width: 100%;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
+header {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
-
-header nav{
-    width: 100%;
-    height: 80px;
-    background:#8a9c83;
-    list-style: none;
+header nav {
+  width: 100%;
+  height: 80px;
+  background: #8a9c83;
+  list-style: none;
 }
-
-.logo{
-    width: 150px;
-    position: absolute;
-    top: 30px;
-    left: 12%;
+header nav .logo {
+  width: 150px;
+  position: absolute;
+  top: 30px;
+  left: 12%;
 }
-
-header nav ul{
-    z-index: 10;
-    float: right;
-    margin: 5px;
-    margin-right: 50px;
+header nav ul {
+  z-index: 10;
+  float: right;
+  margin: 5px;
+  margin-right: 50px;
 }
-
-header nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 15px ;
+header nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
 }
-
-header nav ul li a{
-    position: relative;
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-    color: white;
+header nav ul li a {
+  position: relative;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
 }
-
-header nav ul li a:before{
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 100%;
-    background: white;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform .4s linear;
+header nav ul li a:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s linear;
 }
-
-header nav ul li a:hover:before{
-    transform: scaleX(1);
-    transform-origin: left;
+header nav ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
-
-header nav ul li a:hover{
-    color: white;
+header nav ul li a:hover {
+  color: white;
 }
 
 label #btn,
-label #cancel{
-    color: white;
-    font-size: 30px;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+label #cancel {
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+/*index*/
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section1 {
+  background-image: url(./multimedia/vino-botella.jpg);
+  background-size: cover;
+  background-position: top center;
+}
+#section1 h1 {
+  display: block;
+  width: fit-content;
+  font-size: 50px;
+  color: #630b08;
+  margin-left: 30px;
+  letter-spacing: 2px;
+}
+#section1 .p1 {
+  margin-left: 30px;
+  margin-top: 15px;
+  width: 50%;
+  line-height: 25px;
+  color: white;
+  font-size: 16px;
+}
+#section1 .p2 {
+  margin-left: 30px;
+  margin-top: 15px;
+  color: grey;
+  font-size: 14px;
+}
+#section1 .masinfo {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #526c72;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 36px;
+  margin-left: 30px;
+  transition: 0.3s ease background-color;
+  transition-property: background-color, color;
+}
+#section1 .masinfo:hover {
+  color: #526c72;
+  transform: scale(1.1);
+}
+#section1 #section1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.nleft {
+  background-color: #979766;
+  height: 350px;
+  width: 100%;
+  background-image: url(./multimedia/viñedo\ b\ y\ n.jpg);
+  background-size: cover;
+  background-position: right;
+}
+
+.nright {
+  background-color: #8a9c83;
+  height: 350px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.nright h2 {
+  margin-top: 20px;
+  color: #d8dbdb;
+  justify-content: center;
+}
+.nright p {
+  text-align: justify;
+  margin-top: 30px;
+}
+
+.regiones {
+  height: auto;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(82, 108, 114);
+  font-size: 30px;
+  padding-top: 50px;
+}
+
+.region {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-template-rows: repeat(1fr);
+  grid-template-areas: "imgn imgc imgp";
+  height: auto;
+  transition: all 0.7s;
+  color: rgb(255, 255, 255);
+  margin-top: 30px;
+  padding: 30px;
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+.region .reg {
+  border: 1px solid #526c72;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(196, 194, 194);
+  min-height: 150px;
+  width: 100%;
+  transition: all 0.7s;
+  font-size: 25px;
+  padding: 80px;
+}
+.region .reg:hover {
+  transform: scale(1.05);
+  transition: all 0.7s;
+}
+.region .imgn {
+  background-image: url(multimedia/norte.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.region .imgp {
+  background-image: url(multimedia/patagonia.jpg.crdownload);
+  background-size: cover;
+  background-position: center;
+}
+.region .imgc {
+  background-image: url(multimedia/cuyo.jfif);
+  background-size: cover;
+  background-position: center;
+}
+
+/* estilos del footer*/
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+  color: #fff;
+  position: static;
 }
 
-#check{
-    display: none;
+.footer-content {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-
-
-/*section index*/
- 
-
-.container{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-#section1{
-    background-image: url(./multimedia/vino-botella.jpg);
-    background-size: cover;
-    background-position: top center;
-}
-
-#section1:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: .7;
-    z-index: -1;
-}
-
-#section1 h1{
-    display: block;
-    width: fit-content;
-    font-size: 50px;
-    color: #630b08;
-    margin-left: 30px;
-    letter-spacing: 2px;
-}
-
-.p1{
-    margin-left: 30px;
-    margin-top: 15px;
-    width: 50%;
-    line-height: 25px;
-    color: white;
-    font-size: 16px;
-}
-
-.p2{
-    margin-left: 30px;
-    margin-top: 15px;
-    color: grey;
-    font-size: 14px;
-}
-
-#section1 .masinfo{
-    display: inline-block;
-    padding: 10px 30px;
-    color: white;
-    background-color: transparent;
-    border: 2px solid #526c72;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    margin-top: 36px;
-    margin-left: 30px;
-    transition: .3s ease background-color;
-    transition-property: background-color, color;
-}
-#section1 .masinfo:hover{
-    color: #526c72;
-    transform: scale(1.1);
-}
-
-
-.nleft{
-    background-color: #979766;
-    height: 350px;
-    width: 100%;
-    background-image:url(./multimedia/viñedo\ b\ y\ n.jpg);
-    background-size: cover;
-    background-position: right;
-}
-
-.nright{
-    background-color: #8a9c83;
-    height: 350px;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-}
-
-.nright h2{
-    margin-top: 20px;
-    color: white;
-    justify-content: center;
-}
-.nright p{
-    text-align: justify;
-    margin-top: 30px;
-}
-
-.regiones{
-    height: auto;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(82, 108, 114);
-    font-size: 30px;
-    padding-top: 50px;
-}
- 
-.region{
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-template-rows: repeat(1fr);
-    grid-template-areas:
-    "imgn imgc imgp";
- 
-    height: auto;
-    transition: all 0.7s;
-    color: rgb(255, 255, 255);
-    margin-top: 30px;
-    padding: 30px;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;  
-    }
- 
-    .reg{
-        border: 1px solid #526c72;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgb(196, 194, 194);
-        min-height: 150px;
-        width: 100%;
-        transition: all 0.7s;
-        font-size: 25px;
-        padding: 80px;
-    }
-   
-    .reg:hover{
-        transform: scale(1.05);
-        transition: all 0.7s;
-    }
- 
-    .imgn{
-        background-image: url(multimedia/norte.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-   
-    .imgp{
-        background-image: url(multimedia/patagonia.jpg.crdownload);
-        background-size:cover ;
-        background-position: center;
-    }
-   
-    .imgc{
-        background-image: url(multimedia/cuyo.jfif);
-        background-size: cover;
-        background-position: center;
-    }
-
-
-    /* estilos del main pag vinos*/
- 
-    .pag2{
-        display: flex;
-    }
- 
-    .principal{
-        background-color: #3537381c;
-    }
- 
-    .principal h1{
-        padding: 50px;
-        font-family: sans-serif;
-        font-size: 50px;
-        text-align: center;
-        display: block;
-        color: #630b08;
-    }
- 
-    .pag2 p{
-        padding:10px 40px;
-        font-size: 16px;
-        line-height: 18px;
-        text-align: left;
-    }
- 
-    .principal h2{
-        font-family: sans-serif;
-        font-size: 20px;
-        padding-left: 40px;
-        padding-top: 30px;
-    }
- 
-    .variedades{
-        font-family: sans-serif;
-        font-size: 20px;
-        line-height: 22px;
-        padding-left: 60px;
-        padding-top: 10px;
-    }
-
-
- 
-    .section{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: 20px;
-    }
-
-    .section h2{
-        position: absolute;
-        font-family: sans-serif;
-        font-size: 30px;
-        margin-top: -180px;
-        color: rgb(255, 255, 255);
-        text-shadow: 20px black; 
-    }
- 
-    .section div{
-        display: flex;
-        flex-direction: column;
-        width: 35%;
-        margin-top: 30px;
-        justify-content: space-around;
-        align-items: center;
-    }
- 
-    .section div img{
-        width: 70%;
-        border-radius: 5px;
-    }
-
-    .section div img:hover{
-        transform: scale(1.1);
-    }
-
-
-.contenedor-galeria-vino {
-    padding: 30px 0;
-    width: 80%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.galeria-vino{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.imagen-vino{
-    width: 24%;
-    margin-bottom: 10px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-}
-
-.imagen-vino > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.hover-galeria-vino{
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-    transform: translateY(50%);
-    opacity: 1;
-    background: rgba(85, 111, 42);
-    transition: transform .5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.hover-galeria-vino img{
-    width: 50px;
-}
-
-.hover-galeria-vino p{
-    color: #fff;
-    margin-bottom: 80px;
-    font-size: 18px;
-}
-
-.imagen-vino:hover .hover-galeria-vino{
-    opacity: 0;
-}
-
-
-
-
-
-/* pag3 viticultura*/
- 
-video{
-    width: 100%; 
+.footer-content h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
 }
 
-.absolute{
-    left: 0;
-    right: 0;
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    justify-content: center;
-    align-items:center;
+.footer-content p {
+  max-width: 400px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #cacdd2;
 }
 
-.absolute h1{
-    font-size: 60px;
-    font-weight: 900;
-    z-index: 100;
-    color:rgb(255, 255, 255);
-    margin-top: 150px;
+.redes {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
 }
 
-.absolute ::after{
-    display: block;
-    width: 30%;
-    height: 10px;
-    content: "";
-    margin: auto;
-    background: rgb(255, 255, 255);
+.redes li {
+  margin: 0 10px;
 }
 
-.overlay{
-    width: 100%;
-    height: 100%;
-    position: absolute;
+.redes a {
+  text-decoration: none;
+  color: #fff;
+  border: 1.1px solid white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50%;
 }
 
-
-
-.contenedor {
-    padding: 60px 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-}
-
-section .titulo {
-    color: rgb(116, 61, 81);
-    font-size: 40px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-main .viticultura{
-    padding: 30px 0 60px 0;
-}
-.contenedor-viticultura{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.imagen-about-us{
-    width: 48%;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-}
-
-.viticultura .contenido-textos{
-    width: 48%;
-}
-
-
-
-.contenido-textos p{
-    padding: 20px 0px 30px 15px;
-    font-weight: 300;
-    line-height: 1.3;
-    text-align: justify;
-}
-
-
-/* Galeria */
-
-
-.noticias{
-    background: #f2f2f2;
-}
-
-.galeria-not{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.imagen-not{
-    width: 24%;
-    margin-bottom: 10px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-}
-
-.imagen-not > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.redes a i {
+  font-size: 1.1rem;
+  width: 25px;
+  transition: color 0.4s ease;
 }
 
-.hover-galeria{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: scale(0);
-    background: rgba(151, 151, 102);
-    transition: transform .5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.redes a:hover {
+  transform: scale(1.2);
+  color: #cfd2d6;
 }
 
-.hover-galeria img{
-    width: 50px;
+.footer-bottom {
+  background: rgb(15, 14, 14);
+  width: 100vw;
+  padding: 20px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
-.hover-galeria p{
-    color: #fff;
-    font-size: 16px;
-   
+.footer-bottom p {
+  float: left;
+  font-size: 12px;
+  word-spacing: 2px;
+  text-transform: capitalize;
 }
 
-.imagen-not:hover .hover-galeria{
-    transform: scale(1);
+.footer-bottom p a {
+  color: #526c72;
+  font-size: 16px;
+  text-decoration: none;
 }
 
-
-
-    /*Bodegas pag 4*/
- 
- 
-.pag4{
-    margin: 50px;
-    font-family: sans-serif;
-    font-size: 45px;
-    text-align: center;
-    color:#526c72;
-}
- 
-.bodegas p{
-    width: 70%;
-    margin: 50px;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: left;
-}
- 
- 
-.select-box select{
-    width: 40%;
-    display: flex;
-    font-size: 14px;
-    color: #526c72;
-    padding: 10px 30px ;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
- 
- 
-.select-box h2{
-    font-size: 16px;
-    font-family: sans-serif;
-    margin-left: 50px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
 }
-
-/*grids*/
 
-.galeria{
-    width: 100%;
-    height: auto;
-    color: #121f08;
-    text-shadow:  2px 2px 2px white;
-    margin-top: 30px;
-    padding: 40px;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(2, 200px);
-    grid-template-areas:
-    "img1 img2 img3 img4"
-    "img5 img6 img7 img8";
-
-}
- 
-.imgn{
-    background-image: url(multimedia/norte.jpg);
-    background-size: cover;
-    background-position: center;
-}
- 
-.imgp{
-    background-image: url(multimedia/patagonia.jpg.crdownload);
-    background-size:cover ;
-    background-position: center;
-}
- 
-.imgc{
-    background-image: url(multimedia/cuyo.jfif);
-    background-size: cover;
-    background-position: center;
-}
- 
-.img{
-    border: 2px solid #526c72;
-    min-height: 130px;
-    width: 100%;
-    transition: all 0.7s;
-    filter: grayscale(100%);
-    font-size: 25px;
-    padding: 10px;
-}
- 
-.img:hover{
-    transform: scale(1.05);
-    transition: all 0.7s;
-    filter: grayscale(0);
-}
- 
-.img1{
-    background-image: url(multimedia/1\ tierras\ altas.jpg);
-    background-size: cover;
-    background-position: center;
-}
- 
-.img2{
-    background-image: url(multimedia/2\ casa\ el\ enemigo.jpg);
-    background-size:cover ;
-    background-position: center;
-}
- 
-.img3{
-    background-image: url(multimedia/3\ lopez.jpeg);
-    background-size: cover;
-    background-position: center;
-}
- 
- 
-.img4{
-    background-image: url(multimedia/4\ ruca\ malen.jpg);
-    background-size: cover;
-    background-position: center;
-}
- 
-.img5{
-    background-image: url(multimedia/5\ merced\ del\ estereo.jpg);
-    background-size: cover;
-    background-position: center;
-}
- 
-.img6{
-    background-image: url(multimedia/6\ vistalba.jfif);
-    background-size: cover;
-    background-position: center;
-}
- 
-.img7{
-    background-image: url(multimedia/7\ susana\ balbo.jpeg);
-    background-size: cover;
-    background-position: center;
-}
- 
-.img8{
-    background-image: url(multimedia/8\ budeguer.jpg.crdownload);
-    background-size: cover;
-    background-position: center;
+.footer-menu {
+  float: right;
 }
 
-.carousel-inner img {
-    width: 100%;
-  }
-
- /* contacto*/
-
- .jumbotron h1{
-     text-align: left;
-     color: #630b08;
-     margin-top: 2px;
-     text-transform: capitalize;
-     margin-left: 20px;
-     font-size: 50px;
- }
-
- .row p{
-     left: 20px;
-     font-size: 16px;
-     justify-content: center;
- }
-
-
- .contact_form{  
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-    width: 460px; 
-    height: auto;
-    margin: 80px auto;
-    border-radius: 10px;  
-    padding-top: 30px;
-    padding-bottom: 20px;  
-    background-color: rgb(227, 213, 195); 
-    padding-left: 30px; 
-  }
-  
-  
-  .formulario input{
-    background-color: #fbfbfb; 
-    width: 408px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: rgb(151, 151, 102); 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
-  }
-  
-  
-  .formulario textarea{
-    background-color: #fbfbfb; 
-    width: 405px; 
-    height: 150px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: rgb(151, 151, 102); 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px; 
-    padding-top: 15px; 
-  }
-  
-  
-  .formulario label{
-    display: block; 
-    float: center;  
-  }
-  
-  
-  .formulario button{
-    height: 45px; 
-    padding-left: 5px;
-    padding-right: 5px;   
-    margin-bottom: 20px; 
-    margin-top: 10px;   
-    text-transform: uppercase;
-    background-color: rgb(151, 151, 102); 
-    border-color: rgb(151, 151, 102); 
-    border-style: solid; 
-    border-radius: 10px;  
-    width: 420px;   
-    cursor: pointer;
-  }
-  
-  
-  .formulario button p{
-    color: #fff; 
-    padding: 10px;
-    justify-content: center;
-  }
-  
-  
-  .formulario span{
-    color: rgb(151, 151, 102); 
-  }
-
-  
-  
-  .contact_form h1{
-    font-size: 39px;  
-    text-align: letf; 
-    padding-bottom: 20px; 
-    color: rgb(151, 151, 102);
-  }
-  
-  .formulario p{
-    font-size: 14px; 
-    color: #0e0e0e; 
-  }
-  
-  
-  ::-webkit-input-placeholder {
-   color: #a8a8a8;
-  }
-  
-  
-  ::-webkit-textarea-placeholder {
-   color: #a8a8a8;
-  }
-  
-  
-  .formulario input:focus{
-    outline:0;
-    border: 1px solid rgb(180, 182, 72);
-  }
-  
-  
-  .formulario textarea:focus{
-    outline:0;
-    border: 1px solid rgb(180, 182, 72);
-  }
-  
-  .formulario select{
-    margin-top: 5px;
-    margin-bottom: 20px;
-    width: 80px;
-    border-color: #979766;
-    border-radius: 5px;
-    color: white;
-    background-color: #979766;
-   }
-   
-.form-group{
-    font-size: 12px;
-    margin-top: 14px;
-    padding-bottom: 10px;
-    display: flex;
+.footer-menu ul {
+  font-size: 12px;
+  display: flex;
+  padding: 20px;
 }
 
-.form-group label{
-    margin-left: 5px;
+.footer-menu ul li {
+  padding-right: 10px;
+  display: block;
 }
 
-.estado-civil{
-    font-size: 14px;
+.footer-menu ul li a {
+  color: #cfd2d6;
+  text-decoration: none;
 }
 
-.aviso{
-    color: #630b08;
-    font-size: 13px; 
+.footer-menu ul li a:hover {
+  color: #526c72;
 }
-
-
-    /* estilos del footer*/
- 
-    footer{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #111;
-        height: auto;
-        width: 100vw;
-        padding-top: 40px;
-        color: #fff;
-        position: static;
-    }
-
-    .footer-content{
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-content h3{
-        font-size: 2.1rem;
-        font-weight: 500;
-        text-transform: capitalize;
-        line-height: 3rem;
-    }
-
-    .footer-content p{
-        max-width: 400px;
-        margin: 10px auto;
-        line-height: 28px;
-        font-size: 14px;
-        color: #cacdd2;
-    }
-
-    .redes{
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 1rem 0 3rem 0;
-    }
-    
-    .redes li{
-        margin: 0 10px;
-    }
-    
-    .redes a{
-        text-decoration: none;
-        color: #fff;
-        border: 1.1px solid white;
-        padding: 5px;
-        margin: 5px;
-        border-radius: 50%;
-    }
-    
-    .redes a i{
-        font-size: 1.1rem;
-        width: 25px;
-        transition: color .4s ease;
-    }
-    
-    .redes a:hover {
-        transform: scale(1.2);
-        color: #cfd2d6;
-    }
-
-    .footer-bottom{
-        background: rgb(15, 14, 14);
-        width: 100vw;
-        padding: 20px;
-        padding-bottom: 40px;
-        text-align: center;
-    }
-
-    .footer-bottom p{
-        float: left;;
-        font-size: 12px;
-        word-spacing: 2px;
-        text-transform: capitalize;
-     }
-     .footer-bottom p a{
-       color:#526c72;
-       font-size: 16px;
-       text-decoration: none;
-     }
-     .footer-bottom span{
-         text-transform: uppercase;
-         opacity: .4;
-         font-weight: 200;
-     }
-
-     .footer-menu{
-        float: right;
-      }
-      
-      .footer-menu ul{
-        font-size: 12px;
-        display: flex;
-        padding: 20px;
-      }
-      
-      .footer-menu ul li{
-      padding-right: 10px;
-      display: block;
-      }
-      
-      .footer-menu ul li a{
-        color: #cfd2d6;
-        text-decoration: none;
-      }
-      
-      .footer-menu ul li a:hover{
-        color: #526c72;
-      }
-
-
-    
- 
-
-
-
-
 
 /*Media queries*/
-
-
 @media only screen and (max-width: 978px) {
-
-    /*header*/
-    nav .logo{
-        left: 10%;
-        top: 30px;
-        width: 130px;
-    }
-
-
-    header nav ul li a{
-        font-size: 17px;
-    }
-
-    #btn{
-        margin-left: 25px;
-    }
-    #cancel{
-        margin-left: 25px;
-    }
-
-    label #btn{
-        display: block;
-    }
-
-    header ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #a2b39c;
-        top: 75px;
-        right: 100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    header nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-        color: white;
-    }
-    header nav ul li a{
-        font-size: 17px;
-    }
-
-    #check:checked ~ ul{
-        left: 0;
-        bottom: 0;
-   
-    }
-    #check:checked ~ label #btn{
-        display: none;
-        
-    }
-    #check:checked ~ label #cancel{
-        display: block;
-    }
-
-  
-    #section1 h1{
-        font-size: 40px;
-    }
-
-    /*pag vinos*/
-    .section h2{
-        font-size: 18px;
-        margin-left: -30px;
-        margin-top: -100px;
-    }
-    
+  /*header*/
+  nav .logo {
+    left: 10%;
+    top: 30px;
+    width: 130px;
+  }
+  header nav ul li a {
+    font-size: 17px;
+  }
+  #btn {
+    margin-left: 25px;
+  }
+  #cancel {
+    margin-left: 25px;
+  }
+  label #btn {
+    display: block;
+  }
+  header ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #a2b39c;
+    top: 75px;
+    right: 100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  header nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    color: white;
+  }
+  header nav ul li a {
+    font-size: 17px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    bottom: 0;
+  }
+  #check:checked ~ label #btn {
+    display: none;
+  }
+  #check:checked ~ label #cancel {
+    display: block;
+  }
+  #section1 h1 {
+    font-size: 40px;
+  }
 }
-
-
-
-
-@media only screen and (max-width:767px) {
-
-    /*header*/
-    .logo{
-        margin-left: 25px;
-    }
-    #btn{
-        margin-left: 25px;
-    }
-    #cancel{
-        margin-left: 25px;
-    }
-
-    
-/*pag 4 bodegas*/
-.galeria{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-.img1{
-    grid-column: 1/2;
-    grid-row: 1/3;
-}
-.img2{
-    grid-column:2/3 ;
-    grid-row:1/2 ;
-}
-.img3{
-    grid-column:3/4 ;
-    grid-row:1/3 ;
-}
-.img4{
-    grid-column: 2/3 ;
-    grid-row:2/3 ;
-}
-.img5{
-    grid-column:1/3;
-    grid-row:3/4 ;
-}
-.img6{
-    grid-column: 3/4;
-    grid-row:3/4 ;
-}
-.img7{
-    grid-column:1/2;
-    grid-row:4/5 ;
-}
-.img8{
-    grid-column:2/4 ;
-    grid-row:4/5 ;
-}
-/*img index*/
-.imgn{
+@media only screen and (max-width: 767px) {
+  /*header*/
+  .logo {
+    margin-left: 25px;
+  }
+  #btn {
+    margin-left: 25px;
+  }
+  #cancel {
+    margin-left: 25px;
+  }
+  /*img index*/
+  .imgn {
     grid-column: 1/4;
     grid-row: 1/1;
+  }
+  .imgp {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  .imgc {
+    grid-column: 1/4;
+    grid-row: 3/3;
+  }
 }
-.imgp{
-    grid-column:1/4 ;
-    grid-row:2/3 ;
-}
-.imgc{
-    grid-column:1/4 ;
-    grid-row:3/3 ;
-}
-
-/*pag2 vinos*/
-.section h2{
-    font-size: 16px;
-    margin-left: -35px;
-    margin-top: -100px;
-}
-
-.hover-galeria-vino p{
-    margin-bottom: 60px;
-    font-size: 14px;
-}
-
-/*pag3 viticultura*/
-.absolute h1{
-    z-index: 10;
-}
-
-.contenedor-viticultura{
-    display: inline;
-}
-
-.imagen-about-us{
-    width: 100%;
-}
-
-.viticultura .contenido-textos{
-    width: 100%;
-}
-
-}
-
-
-
-@media only screen and (min-width: 320px)and (max-width:599px){
-/*header*/
-    #section1 h1{
-        font-size: 30px;
-        margin-top: 20px;
-        letter-spacing: 1px;
-    }
- 
-
-    .p1{
-        line-height: 17px;
-        color: white;
-        font-size: 15px;
-    }
-    
-    .p2{
-        color: grey;
-        font-size: 12px;
-    }
-/*section index*/
-    .region{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        border-radius:0%;
-    }
- 
-    .imgn{
-        grid-column: 1/3;
-        grid-row: 1/1;
-    }
-    .imgp{
-        grid-column:1/3 ;
-        grid-row:2/3 ;
-    }
-    .imgc{
-        grid-column:1/3 ;
-        grid-row:3/3 ;
-    }
-
-    
-    /*pag2 vinos*/
-    
-    .section h2{
-        font-size: 14px;
-        margin-top: -40px;
-        margin-left: -40px;
-    }
-    
- 
-    .section div{
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        width: 40%;
-    }
-
-    
-    .contenedor-galeria-vino {
-       width:80%;
-       margin: auto;
-}
-
-
-
-.imagen-vino{
-    width: 50%;
-    margin-bottom: 10px;
-}
-
-
-    .hover-galeria-vino p{
-        margin-bottom: 80px;
-        font-size: 16px;
-    }
-
-    /*pag3 viticultura*/
-
-    
-.absolute h1{
-    font-size: 40px;
-    margin-top: 50px;
-}
-
-.contenedor {
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-section .titulo {
-    font-size: 35px;
-}
-
-
-.contenedor-viticultura{
-    display: inline;
-}
-
-.imagen-about-us{
-    width: 100%;
-}
-
-.viticultura .contenido-textos{
-    width: 100%;
-}
-
-.hover-galeria p{
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+  /*header*/
+  #section1 h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+  }
+  .p1 {
+    line-height: 17px;
+    color: white;
+    font-size: 15px;
+  }
+  .p2 {
+    color: grey;
     font-size: 12px;
+  }
+  /*section index*/
+  .region {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    border-radius: 0%;
+  }
+  .imgn {
+    grid-column: 1/3;
+    grid-row: 1/1;
+  }
+  .imgp {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .imgc {
+    grid-column: 1/3;
+    grid-row: 3/3;
+  }
+  /*footer*/
+  .footer-content {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-menu ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+  .footer-bottom p {
+    font-size: 12px;
+  }
+  .footer-menu ul {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
 }
 
-
-    /*pag 4 bodega*/
-    .galeria{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /*footer*/
-    .footer-content{ 
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .footer-menu ul{
-        margin-top: 10px;
-        margin-bottom: 20px;
-        font-size: 10px;
-      }
-
-      .footer-bottom p{
-        font-size: 12px;
-     }
-
-     .footer-menu ul{
-        display: flex;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        font-size: 10px;
-      }
-    
-    
-}
-     
+/*# sourceMappingURL=estilos.css.map */
