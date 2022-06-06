@@ -204,6 +204,7 @@ label #cancel{
         margin-top: 20px;
         color: $color1;
         justify-content: center;
+
     }
     p{
         text-align: justify;
@@ -274,6 +275,612 @@ label #cancel{
     }
 
 
+
+    /* pag 2 vinos*/
+ 
+    .pag2{
+        display: flex;
+    }
+ 
+    .principal{
+        background-color: #3537381c;
+
+        h1{
+            padding: 50px;
+            font-family: sans-serif;
+            font-size: 50px;
+            text-align: center;
+            display: block;
+            color: #630b08;
+        }
+
+        h2{
+            font-family: sans-serif;
+            font-size: 20px;
+            padding-left: 40px;
+            padding-top: 30px;
+        }
+    }
+ 
+ 
+    .pag2 p{
+        padding:10px 40px;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: left;
+    }
+ 
+
+ 
+    .variedades{
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 22px;
+        padding-left: 60px;
+        padding-top: 10px;
+    }
+
+
+ 
+    .section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+        h2{
+            position: absolute;
+            font-family: sans-serif;
+            font-size: 30px;
+            margin-top: -180px;
+            color: rgb(255, 255, 255);
+            text-shadow: 20px black; 
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            width: 35%;
+            margin-top: 30px;
+            justify-content: space-around;
+            align-items: center;
+
+            img{
+                width: 70%;
+                border-radius: 5px;
+            }
+
+            img:hover{
+                transform: scale(1.1);
+            }
+        
+        }
+    }
+ 
+
+
+
+.contenedor-galeria-vino {
+    padding: 30px 0;
+    width: 80%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+
+    .galeria-vino{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .imagen-vino{
+            width: 24%;
+            margin-bottom: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+        }
+        
+        .imagen-vino > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}
+
+
+
+.hover-galeria-vino{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    transform: translateY(50%);
+    opacity: 1;
+    background: rgba(85, 111, 42);
+    transition: transform .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img{
+        width: 50px;
+    }
+
+    p{
+        color: #fff;
+        margin-bottom: 80px;
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+.imagen-vino:hover .hover-galeria-vino{
+    opacity: 0;
+}
+
+
+
+
+
+/* pag3 viticultura*/
+ 
+video{
+    width: 100%; 
+}
+
+.absolute{
+    left: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    align-items:center;
+}
+
+.absolute h1{
+    font-size: 60px;
+    font-weight: 900;
+    z-index: 100;
+    color:rgb(255, 255, 255);
+    margin-top: 150px;
+}
+
+.absolute ::after{
+    display: block;
+    width: 30%;
+    height: 10px;
+    content: "";
+    margin: auto;
+    background: rgb(255, 255, 255);
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+section .titulo {
+    color: rgb(116, 61, 81);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+main .viticultura{
+    padding: 30px 0 60px 0;
+}
+.contenedor-viticultura{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{
+    width: 48%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.viticultura .contenido-textos{
+    width: 48%;
+}
+
+
+
+.contenido-textos p{
+    padding: 20px 0px 30px 15px;
+    font-weight: 300;
+    line-height: 1.3;
+    text-align: justify;
+}
+
+
+/* Galeria */
+
+
+.noticias{
+    background: #f2f2f2;
+}
+
+.galeria-not{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-not{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-not > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgba(151, 151, 102);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+    font-size: 16px;
+   
+}
+
+.imagen-not:hover .hover-galeria{
+    transform: scale(1);
+}
+
+
+
+    /*Bodegas pag 4*/
+ 
+ 
+.pag4{
+    margin: 50px;
+    font-family: sans-serif;
+    font-size: 45px;
+    text-align: center;
+    color:#526c72;
+}
+ 
+.bodegas p{
+    width: 70%;
+    margin: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+}
+ 
+ 
+.select-box select{
+    width: 40%;
+    display: flex;
+    font-size: 14px;
+    color: #526c72;
+    padding: 10px 30px ;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+ 
+ 
+.select-box h2{
+    font-size: 16px;
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/*grids*/
+
+.galeria{
+    width: 100%;
+    height: auto;
+    color: #121f08;
+    text-shadow:  2px 2px 2px white;
+    margin-top: 30px;
+    padding: 40px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas:
+    "img1 img2 img3 img4"
+    "img5 img6 img7 img8";
+
+}
+ 
+.imgn{
+    background-image: url(multimedia/norte.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.imgp{
+    background-image: url(multimedia/patagonia.jpg.crdownload);
+    background-size:cover ;
+    background-position: center;
+}
+ 
+.imgc{
+    background-image: url(multimedia/cuyo.jfif);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img{
+    border: 2px solid #526c72;
+    min-height: 130px;
+    width: 100%;
+    transition: all 0.7s;
+    filter: grayscale(100%);
+    font-size: 25px;
+    padding: 10px;
+}
+ 
+.img:hover{
+    transform: scale(1.05);
+    transition: all 0.7s;
+    filter: grayscale(0);
+}
+ 
+.img1{
+    background-image: url(multimedia/1\ tierras\ altas.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img2{
+    background-image: url(multimedia/2\ casa\ el\ enemigo.jpg);
+    background-size:cover ;
+    background-position: center;
+}
+ 
+.img3{
+    background-image: url(multimedia/3\ lopez.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+ 
+.img4{
+    background-image: url(multimedia/4\ ruca\ malen.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img5{
+    background-image: url(multimedia/5\ merced\ del\ estereo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img6{
+    background-image: url(multimedia/6\ vistalba.jfif);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img7{
+    background-image: url(multimedia/7\ susana\ balbo.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.img8{
+    background-image: url(multimedia/8\ budeguer.jpg.crdownload);
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-inner img {
+    width: 100%;
+  }
+
+ /* contacto*/
+
+ .jumbotron h1{
+     text-align: left;
+     color: #630b08;
+     margin-top: 2px;
+     text-transform: capitalize;
+     margin-left: 20px;
+     font-size: 50px;
+ }
+
+ .row p{
+     left: 20px;
+     font-size: 16px;
+     justify-content: center;
+ }
+
+
+ .contact_form{  
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    width: 460px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: rgb(227, 213, 195); 
+    padding-left: 30px; 
+  }
+  
+  
+  .formulario input{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgb(151, 151, 102); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+  }
+  
+  
+  .formulario textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgb(151, 151, 102); 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+  }
+  
+  
+  .formulario label{
+    display: block; 
+    float: center;  
+  }
+  
+  
+  .formulario button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: rgb(151, 151, 102); 
+    border-color: rgb(151, 151, 102); 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+  }
+  
+  
+  .formulario button p{
+    color: #fff; 
+    padding: 10px;
+    justify-content: center;
+  }
+  
+  
+  .formulario span{
+    color: rgb(151, 151, 102); 
+  }
+
+  
+  
+  .contact_form h1{
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: rgb(151, 151, 102);
+  }
+  
+  .formulario p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+  }
+  
+  
+  ::-webkit-input-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  ::-webkit-textarea-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  .formulario input:focus{
+    outline:0;
+    border: 1px solid rgb(180, 182, 72);
+  }
+  
+  
+  .formulario textarea:focus{
+    outline:0;
+    border: 1px solid rgb(180, 182, 72);
+  }
+  
+  .formulario select{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 80px;
+    border-color: #979766;
+    border-radius: 5px;
+    color: white;
+    background-color: #979766;
+   }
+   
+.form-group{
+    font-size: 12px;
+    margin-top: 14px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.form-group label{
+    margin-left: 5px;
+}
+
+.estado-civil{
+    font-size: 14px;
+}
+
+.aviso{
+    color: #630b08;
+    font-size: 13px; 
+}
 
 
     /* estilos del footer*/
@@ -468,6 +1075,13 @@ label #cancel{
     #section1 h1{
         font-size: 40px;
     }
+
+    /*pag vinos*/
+    .section h2{
+        font-size: 18px;
+        margin-left: -30px;
+        margin-top: -100px;
+    }
     
 }
 
@@ -487,7 +1101,44 @@ label #cancel{
         margin-left: 25px;
     }
 
-
+    
+/*pag 4 bodegas*/
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.img1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.img2{
+    grid-column:2/3 ;
+    grid-row:1/2 ;
+}
+.img3{
+    grid-column:3/4 ;
+    grid-row:1/3 ;
+}
+.img4{
+    grid-column: 2/3 ;
+    grid-row:2/3 ;
+}
+.img5{
+    grid-column:1/3;
+    grid-row:3/4 ;
+}
+.img6{
+    grid-column: 3/4;
+    grid-row:3/4 ;
+}
+.img7{
+    grid-column:1/2;
+    grid-row:4/5 ;
+}
+.img8{
+    grid-column:2/4 ;
+    grid-row:4/5 ;
+}
 /*img index*/
 .imgn{
     grid-column: 1/4;
@@ -500,6 +1151,35 @@ label #cancel{
 .imgc{
     grid-column:1/4 ;
     grid-row:3/3 ;
+}
+
+/*pag2 vinos*/
+.section h2{
+    font-size: 16px;
+    margin-left: -35px;
+    margin-top: -100px;
+}
+
+.hover-galeria-vino p{
+    margin-bottom: 60px;
+    font-size: 14px;
+}
+
+/*pag3 viticultura*/
+.absolute h1{
+    z-index: 10;
+}
+
+.contenedor-viticultura{
+    display: inline;
+}
+
+.imagen-about-us{
+    width: 100%;
+}
+
+.viticultura .contenido-textos{
+    width: 100%;
 }
 
 }
@@ -546,7 +1226,93 @@ label #cancel{
         grid-row:3/3 ;
     }
 
-  
+    
+    /*pag2 vinos*/
+    
+    .section h2{
+        font-size: 14px;
+        margin-top: -40px;
+        margin-left: -40px;
+    }
+    
+ 
+    .section div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 40%;
+    }
+
+    
+    .contenedor-galeria-vino {
+       width:80%;
+       margin: auto;
+}
+
+
+
+.imagen-vino{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+
+    .hover-galeria-vino p{
+        margin-bottom: 80px;
+        font-size: 16px;
+    }
+
+    /*pag3 viticultura*/
+
+    
+.absolute h1{
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.contenedor {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+section .titulo {
+    font-size: 35px;
+}
+
+
+.contenedor-viticultura{
+    display: inline;
+}
+
+.imagen-about-us{
+    width: 100%;
+}
+
+.viticultura .contenido-textos{
+    width: 100%;
+}
+
+.hover-galeria p{
+    font-size: 12px;
+}
+
+.imagen-not{
+    width: 50%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    padding: 2px;
+}
+
+
+    /*pag 4 bodega*/
+    .galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     /*footer*/
     .footer-content{ 
         align-items: center;
@@ -571,7 +1337,3 @@ label #cancel{
       }
 }
      
-
-
-
-
