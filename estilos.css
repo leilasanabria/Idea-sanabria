@@ -168,7 +168,7 @@ label #cancel {
   height: 350px;
   width: 100%;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 .nright h2 {
   margin-top: 20px;
@@ -178,6 +178,7 @@ label #cancel {
 .nright p {
   text-align: justify;
   margin-top: 30px;
+  padding: 10px;
 }
 
 .regiones {
@@ -203,7 +204,12 @@ label #cancel {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
-.region .reg {
+.region .reg:hover {
+  transform: scale(1.05);
+  transition: all 0.7s;
+}
+.region .imgn {
+  background-image: url(multimedia/norte.jpg);
   border: 1px solid #526c72;
   border-radius: 10px;
   box-shadow: 0 0 10px rgb(196, 194, 194);
@@ -212,23 +218,32 @@ label #cancel {
   transition: all 0.7s;
   font-size: 25px;
   padding: 80px;
-}
-.region .reg:hover {
-  transform: scale(1.05);
-  transition: all 0.7s;
-}
-.region .imgn {
-  background-image: url(multimedia/norte.jpg);
   background-size: cover;
   background-position: center;
 }
 .region .imgp {
   background-image: url(multimedia/patagonia.jpg.crdownload);
+  border: 1px solid #526c72;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(196, 194, 194);
+  min-height: 150px;
+  width: 100%;
+  transition: all 0.7s;
+  font-size: 25px;
+  padding: 80px;
   background-size: cover;
   background-position: center;
 }
 .region .imgc {
   background-image: url(multimedia/cuyo.jfif);
+  border: 1px solid #526c72;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(196, 194, 194);
+  min-height: 150px;
+  width: 100%;
+  transition: all 0.7s;
+  font-size: 25px;
+  padding: 80px;
   background-size: cover;
   background-position: center;
 }
@@ -238,19 +253,23 @@ label #cancel {
   display: flex;
 }
 
-.principal {
-  background-color: rgba(53, 55, 56, 0.1098039216);
+.principal, .principal--nuevo, .principal--nuevo .principal--nuevo, .principal .principal--nuevo {
+  background-color: rgba(216, 217, 218, 0.1098039216);
 }
-.principal h1 {
+.principal .principal--nuevo, .principal--nuevo .principal--nuevo {
+  margin: 50px;
+  font-size: 45px;
+  text-align: center;
+  color: #526c72;
+}
+.principal h1, .principal--nuevo h1, .principal--nuevo .principal--nuevo h1, .principal .principal--nuevo h1 {
   padding: 50px;
-  font-family: sans-serif;
   font-size: 50px;
   text-align: center;
   display: block;
   color: #630b08;
 }
-.principal h2 {
-  font-family: sans-serif;
+.principal h2, .principal--nuevo h2, .principal--nuevo .principal--nuevo h2, .principal .principal--nuevo h2 {
   font-size: 20px;
   padding-left: 40px;
   padding-top: 30px;
@@ -264,7 +283,6 @@ label #cancel {
 }
 
 .variedades {
-  font-family: sans-serif;
   font-size: 20px;
   line-height: 22px;
   padding-left: 60px;
@@ -279,7 +297,6 @@ label #cancel {
 }
 .section h2 {
   position: absolute;
-  font-family: sans-serif;
   font-size: 30px;
   margin-top: -180px;
   color: rgb(255, 255, 255);
@@ -335,7 +352,7 @@ label #cancel {
   bottom: 0;
   transform: translateY(50%);
   opacity: 1;
-  background: rgb(85, 111, 42);
+  background: #556f2a;
   transition: transform 0.5s ease;
   display: flex;
   justify-content: center;
@@ -467,7 +484,7 @@ main .viticultura {
   height: 100%;
   top: 0;
   transform: scale(0);
-  background: rgb(151, 151, 102);
+  background: #979766;
   transition: transform 0.5s;
   display: flex;
   justify-content: center;
@@ -489,11 +506,9 @@ main .viticultura {
 }
 
 /*Bodegas pag 4*/
-.pag4 {
+.principal--nuevo {
   margin: 50px;
-  font-family: sans-serif;
   font-size: 45px;
-  text-align: center;
   color: #526c72;
 }
 
@@ -523,7 +538,7 @@ main .viticultura {
   font-family: sans-serif;
   margin-left: 50px;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /*grids*/
@@ -543,34 +558,6 @@ main .viticultura {
   grid-template-areas: "img1 img2 img3 img4" "img5 img6 img7 img8";
 }
 
-.imgn {
-  background-image: url(multimedia/norte.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.imgp {
-  background-image: url(multimedia/patagonia.jpg.crdownload);
-  background-size: cover;
-  background-position: center;
-}
-
-.imgc {
-  background-image: url(multimedia/cuyo.jfif);
-  background-size: cover;
-  background-position: center;
-}
-
-.img {
-  border: 2px solid #526c72;
-  min-height: 130px;
-  width: 100%;
-  transition: all 0.7s;
-  filter: grayscale(100%);
-  font-size: 25px;
-  padding: 10px;
-}
-
 .img:hover {
   transform: scale(1.05);
   transition: all 0.7s;
@@ -579,48 +566,104 @@ main .viticultura {
 
 .img1 {
   background-image: url(multimedia/1\ tierras\ altas.jpg);
+  border: 2px solid #526c72;
+  min-height: 130px;
+  width: 100%;
+  transition: all 0.7s;
+  filter: grayscale(100%);
+  font-size: 25px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
 }
 
 .img2 {
   background-image: url(multimedia/2\ casa\ el\ enemigo.jpg);
+  border: 2px solid #526c72;
+  min-height: 130px;
+  width: 100%;
+  transition: all 0.7s;
+  filter: grayscale(100%);
+  font-size: 25px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
 }
 
 .img3 {
   background-image: url(multimedia/3\ lopez.jpeg);
+  border: 2px solid #526c72;
+  min-height: 130px;
+  width: 100%;
+  transition: all 0.7s;
+  filter: grayscale(100%);
+  font-size: 25px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
 }
 
 .img4 {
   background-image: url(multimedia/4\ ruca\ malen.jpg);
+  border: 2px solid #526c72;
+  min-height: 130px;
+  width: 100%;
+  transition: all 0.7s;
+  filter: grayscale(100%);
+  font-size: 25px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
 }
 
 .img5 {
   background-image: url(multimedia/5\ merced\ del\ estereo.jpg);
+  border: 2px solid #526c72;
+  min-height: 130px;
+  width: 100%;
+  transition: all 0.7s;
+  filter: grayscale(100%);
+  font-size: 25px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
 }
 
 .img6 {
   background-image: url(multimedia/6\ vistalba.jfif);
+  border: 2px solid #526c72;
+  min-height: 130px;
+  width: 100%;
+  transition: all 0.7s;
+  filter: grayscale(100%);
+  font-size: 25px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
 }
 
 .img7 {
   background-image: url(multimedia/7\ susana\ balbo.jpeg);
+  border: 2px solid #526c72;
+  min-height: 130px;
+  width: 100%;
+  transition: all 0.7s;
+  filter: grayscale(100%);
+  font-size: 25px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
 }
 
 .img8 {
   background-image: url(multimedia/8\ budeguer.jpg.crdownload);
+  border: 2px solid #526c72;
+  min-height: 130px;
+  width: 100%;
+  transition: all 0.7s;
+  filter: grayscale(100%);
+  font-size: 25px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
 }
@@ -850,17 +893,15 @@ footer {
   padding-bottom: 40px;
   text-align: center;
 }
-
 .footer-bottom p {
   float: left;
   font-size: 12px;
   word-spacing: 2px;
   text-transform: capitalize;
 }
-
 .footer-bottom p a {
   color: #526c72;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
 }
 
@@ -873,18 +914,15 @@ footer {
 .footer-menu {
   float: right;
 }
-
 .footer-menu ul {
   font-size: 12px;
   display: flex;
   padding: 20px;
 }
-
 .footer-menu ul li {
   padding-right: 10px;
   display: block;
 }
-
 .footer-menu ul li a {
   color: #cfd2d6;
   text-decoration: none;

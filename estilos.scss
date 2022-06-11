@@ -7,10 +7,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
-$color1:#d8dbdb;
-$color2:#8a9c83;
-$color3:#630b08;
-$color4: #526c72;
+$colors: (
+color1:#d8dbdb,
+color2:#8a9c83,
+color3:#630b08,
+color4:#526c72,
+color5:#979766
+);
+
+
 
 html{
     scroll-behavior: smooth;
@@ -18,10 +23,12 @@ html{
 
     body{
     width: 100%;
-    background-color:#d8dbdb ;
+    background-color: map-get($colors, color1) ;
     font-family: 'Roboto', sans-serif;
   }
  }
+
+
 
 header{
     width: 100%;
@@ -129,7 +136,7 @@ label #cancel{
         display: block;
         width: fit-content;
         font-size: 50px;
-        color: #630b08;
+        color: map-get($colors, color3) ;
         margin-left: 30px;
         letter-spacing: 2px;
     }
@@ -185,7 +192,7 @@ label #cancel{
 
 
 .nleft{
-    background-color: #979766;
+    background-color: map-get($colors, color5);
     height: 350px;
     width: 100%;
     background-image:url(./multimedia/viñedo\ b\ y\ n.jpg);
@@ -194,20 +201,21 @@ label #cancel{
 }
 
 .nright{
-    background-color: #8a9c83;
+    background-color: map-get($colors, color2);
     height: 350px;
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 
     h2{
         margin-top: 20px;
-        color: $color1;
+        color: map-get($colors, color1) ;
         justify-content: center;
     }
     p{
         text-align: justify;
         margin-top: 30px;
+        padding: 10px;
     }
 }
 
@@ -228,7 +236,6 @@ label #cancel{
     grid-template-rows: repeat(1fr);
     grid-template-areas:
     "imgn imgc imgp";
-
     height: auto;
     transition: all 0.7s;
     color: rgb(255, 255, 255);
@@ -237,8 +244,9 @@ label #cancel{
     font-size: 35px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;  
+    
 
-    .reg{
+    @mixin reg{
         border: 1px solid #526c72;
         border-radius: 10px;
         box-shadow: 0 0 10px rgb(196, 194, 194);
@@ -247,29 +255,32 @@ label #cancel{
         transition: all 0.7s;
         font-size: 25px;
         padding: 80px;
+
+        background-size: cover;
+        background-position: center;
     }
+
    
     .reg:hover{
         transform: scale(1.05);
         transition: all 0.7s;
     }
+
+
  
     .imgn{
         background-image: url(multimedia/norte.jpg);
-        background-size: cover;
-        background-position: center;
+        @include reg;
     }
    
     .imgp{
         background-image: url(multimedia/patagonia.jpg.crdownload);
-        background-size:cover ;
-        background-position: center;
+        @include reg;
     }
    
     .imgc{
         background-image: url(multimedia/cuyo.jfif);
-        background-size: cover;
-        background-position: center;
+        @include reg;
     }
     }
 
@@ -282,11 +293,17 @@ label #cancel{
     }
  
     .principal{
-        background-color: #3537381c;
+        background-color: #d8d9da1c;
+
+        .principal--nuevo{
+            @extend .principal;
+             margin: 50px;
+             font-size: 45px;
+             text-align: center;
+             color:#526c72; }
 
         h1{
             padding: 50px;
-            font-family: sans-serif;
             font-size: 50px;
             text-align: center;
             display: block;
@@ -294,13 +311,13 @@ label #cancel{
         }
 
         h2{
-            font-family: sans-serif;
             font-size: 20px;
             padding-left: 40px;
             padding-top: 30px;
         }
     }
  
+    
  
     .pag2 p{
         padding:10px 40px;
@@ -312,7 +329,6 @@ label #cancel{
 
  
     .variedades{
-        font-family: sans-serif;
         font-size: 20px;
         line-height: 22px;
         padding-left: 60px;
@@ -329,7 +345,6 @@ label #cancel{
 
         h2{
             position: absolute;
-            font-family: sans-serif;
             font-size: 30px;
             margin-top: -180px;
             color: rgb(255, 255, 255);
@@ -398,7 +413,7 @@ label #cancel{
     bottom: 0;
     transform: translateY(50%);
     opacity: 1;
-    background: rgba(85, 111, 42);
+    background: #556f2a;
     transition: transform .5s ease;
     display: flex;
     justify-content: center;
@@ -418,12 +433,9 @@ label #cancel{
 
 
 
-
-
 .imagen-vino:hover .hover-galeria-vino{
     opacity: 0;
 }
-
 
 
 
@@ -547,7 +559,7 @@ main .viticultura{
     height: 100%;
     top: 0;
     transform: scale(0);
-    background: rgba(151, 151, 102);
+    background: map-get($colors, color5);
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -572,15 +584,13 @@ main .viticultura{
 
 
     /*Bodegas pag 4*/
- 
- 
-.pag4{
-    margin: 50px;
-    font-family: sans-serif;
-    font-size: 45px;
-    text-align: center;
-    color:#526c72;
-}
+  
+
+    .principal--nuevo{
+        @extend .principal;
+         margin: 50px;
+         font-size: 45px;
+         color:#526c72; }    
  
 .bodegas p{
     width: 70%;
@@ -610,7 +620,7 @@ main .viticultura{
     font-family: sans-serif;
     margin-left: 50px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /*grids*/
@@ -635,25 +645,8 @@ main .viticultura{
 
 }
  
-.imgn{
-    background-image: url(multimedia/norte.jpg);
-    background-size: cover;
-    background-position: center;
-}
  
-.imgp{
-    background-image: url(multimedia/patagonia.jpg.crdownload);
-    background-size:cover ;
-    background-position: center;
-}
- 
-.imgc{
-    background-image: url(multimedia/cuyo.jfif);
-    background-size: cover;
-    background-position: center;
-}
- 
-.img{
+@mixin img{
     border: 2px solid #526c72;
     min-height: 130px;
     width: 100%;
@@ -661,6 +654,9 @@ main .viticultura{
     filter: grayscale(100%);
     font-size: 25px;
     padding: 10px;
+
+    background-size: cover;
+    background-position: center;
 }
  
 .img:hover{
@@ -671,51 +667,44 @@ main .viticultura{
  
 .img1{
     background-image: url(multimedia/1\ tierras\ altas.jpg);
-    background-size: cover;
-    background-position: center;
+    @include img;
+    
 }
  
 .img2{
     background-image: url(multimedia/2\ casa\ el\ enemigo.jpg);
-    background-size:cover ;
-    background-position: center;
+    @include img;
 }
  
 .img3{
     background-image: url(multimedia/3\ lopez.jpeg);
-    background-size: cover;
-    background-position: center;
+    @include img;
 }
  
  
 .img4{
     background-image: url(multimedia/4\ ruca\ malen.jpg);
-    background-size: cover;
-    background-position: center;
+    @include img;
 }
  
 .img5{
     background-image: url(multimedia/5\ merced\ del\ estereo.jpg);
-    background-size: cover;
-    background-position: center;
+    @include img;
 }
  
 .img6{
     background-image: url(multimedia/6\ vistalba.jfif);
-    background-size: cover;
-    background-position: center;
+    @include img;
 }
  
 .img7{
     background-image: url(multimedia/7\ susana\ balbo.jpeg);
-    background-size: cover;
-    background-position: center;
+    @include img;
 }
  
 .img8{
     background-image: url(multimedia/8\ budeguer.jpg.crdownload);
-    background-size: cover;
-    background-position: center;
+    @include img;
 }
 
 .carousel-inner img {
@@ -958,19 +947,22 @@ main .viticultura{
         padding: 20px;
         padding-bottom: 40px;
         text-align: center;
+
+        p{
+            float: left;;
+            font-size: 12px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+
+        a{
+                color:#526c72;
+                font-size: 14px;
+                text-decoration: none;
+              }
+         }
     }
 
-    .footer-bottom p{
-        float: left;;
-        font-size: 12px;
-        word-spacing: 2px;
-        text-transform: capitalize;
-     }
-     .footer-bottom p a{
-       color:#526c72;
-       font-size: 16px;
-       text-decoration: none;
-     }
+     
      .footer-bottom span{
          text-transform: uppercase;
          opacity: .4;
@@ -979,24 +971,25 @@ main .viticultura{
 
      .footer-menu{
         float: right;
+
+        ul{
+            font-size: 12px;
+            display: flex;
+            padding: 20px;
+
+        li{
+            padding-right: 10px;
+            display: block;
+
+            a{
+                color: #cfd2d6;
+                text-decoration: none;
+              }
+                }
+          }
       }
       
-      .footer-menu ul{
-        font-size: 12px;
-        display: flex;
-        padding: 20px;
-      }
-      
-      .footer-menu ul li{
-      padding-right: 10px;
-      display: block;
-      }
-      
-      .footer-menu ul li a{
-        color: #cfd2d6;
-        text-decoration: none;
-      }
-      
+    
       .footer-menu ul li a:hover{
         color: #526c72;
       }
